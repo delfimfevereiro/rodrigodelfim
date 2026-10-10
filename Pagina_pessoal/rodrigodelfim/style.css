@@ -1,0 +1,489 @@
+@charset "UTF-8";
+
+
+:root{
+    --color-bacgraund1: #F5F5F7;
+    --color-bacgraund2: white;
+    --color-glass:#f5f5f781;
+
+    --color-text1: #6E6E73;
+    --color-text2: #1D1D1F;
+
+    --color1: #0D0D0D;
+    --color2: #404040;
+    --color3: #8C8C8C;
+    --color4: #BFBFBF;
+    --color5: #F2F2F2;
+
+    --color-button1: #0162A3;
+    --color-button2: #2E8F2E;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--color-text1);
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+
+}
+
+body{
+    background-color: #F5F5F7;
+    font-family: sans-serif;
+}
+
+h1{
+    letter-spacing: 2px;
+}
+
+/*.particula{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background: 
+    radial-gradient(circle at 10% 20%, var(--color3) 0%, transparent 20%), radial-gradient(circle at 90% 80%, var(--color4) 0%, transparent 20%);
+}*/
+
+#Backgraund{
+    margin: 10px;
+    width: calc(100% - 20px);
+    border-radius: 10px;
+    align-items: center; 
+    
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--color-glass);
+    backdrop-filter: blur(5px);
+    z-index: 100;
+    padding: 1rem;
+    
+}
+
+.links{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.menulink {
+    text-decoration: none;
+    color: var(--color-text2);
+    font-weight: 200;
+    font-size: small;
+    position: relative;
+    padding: 0.2rem;
+    transition: 0.5s;
+}
+
+.menulink:hover{
+    font-weight: 400;
+    font-size: medium;
+    
+}
+
+.menulink::after{
+    content: '';
+    height: 1%;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--color1);
+    transition: 0.5s;
+}
+
+.menulink:hover::after{
+    width: 100%;
+}
+
+main{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#perfil{
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.273);
+    box-shadow: 0px 0px 20px ;
+    animation: flutuar 5s ease-in-out infinite;
+}
+
+main > h1 {
+    margin-top: 30px;
+    color: var(--color-text1);
+    letter-spacing: 4px;
+    font-weight: 400;
+}
+
+main > p{
+    margin-top: 5px;
+    color: var(--color-text1);
+}
+
+#sobre{
+    padding: 6rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#sobre > h1{
+    text-align: center;
+    color: var(--color-text1);
+    margin: 40px;
+    font-weight: 300;
+}
+
+#sobre-paragrafo{
+    max-width: 900px;
+    padding: 2rem;
+    margin: 0 auto;
+    border-radius: 8px;
+    background-color: var(--color-bacgraund2);
+    
+}
+
+#sobre-paragrafo > p {
+    font-weight: 200;
+    line-height: 2em;
+    text-align: justify;
+    letter-spacing: 3pxm;
+    margin-bottom: 20px;
+   
+}
+
+#projetos {
+    padding: 10rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#projetos > h1{
+    position: absolute;
+    margin-bottom: 420px;
+    font-weight: 300;
+}
+
+.projetos-caixa {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+
+.projeto-card{
+    background-color: var(--color-bacgraund2);
+    width: 400px;
+    border-radius: 8px;
+    margin: 40px;
+    overflow: hidden;
+    transition: 0.6s;
+}
+
+.projeto-card:hover{
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.345);
+    transform: translateY(-5px);
+    scale: 100%;
+    cursor: pointer;
+}
+
+.img-card{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.info-projetos {
+    padding: 1.5rem;
+}
+
+.titulo-info {
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.titulo-paragrafo {
+    font-weight: 100;
+}
+
+
+
+#consultoria{
+    padding: 10rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#instagram{
+    padding: 15rem 6rem;
+    display: flex;
+    flex-direction: column;
+    float: right;
+  width: 30%/* ajuste o tamanho conforme necessário */
+}
+
+#linkedin{
+    display: flex;
+  justify-content: flex-start; /* Alinha os itens à esquerda */
+  padding: 5rem 5rem;
+    display: flex;
+    flex-direction:var(--color1);
+  width: 20%;/* ajuste o tamanho conforme necessário */
+  
+}
+
+.instagram_texto{
+    color: var(--color-bacgraund1);
+    font-size: medium;
+    background-color: var(--color-button2);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    transform: translateY(-4px);
+    font-weight: 700;
+}
+
+#consultoria > h1{
+    position: absolute;
+    margin-bottom: 420px;
+    font-weight: 300;
+}
+
+
+.projetos-caixa_consultoria {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: auto;
+
+}
+
+.consult-card{
+    background-color: var(--color-bacgraund2);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.6s;
+}
+
+
+#contato{
+    padding: 3rem 2rem;
+    margin: auto;    
+  align-items: center;       /* Centraliza verticalmente as imagens e o form */
+  justify-content: center;   /* Centraliza o conjunto no meio da tela */
+  gap: 20px;                 /* Adiciona um espaço entre as imagens e o form */
+
+}
+
+
+#contato > h1 {
+    padding: 1rem 2rem;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 300;
+}
+
+#caixa-form{
+    max-width: 300px;
+    background-color: var(--color-bacgraund2);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 0 auto;
+    
+    align-items: center;       /* Centraliza verticalmente as imagens e o form */
+  justify-content: center;   /* Centraliza o conjunto no meio da tela */
+  gap: 20px;                 /* Adiciona um espaço entre as imagens e o form */
+
+    
+}
+
+.container-tres-colunas {
+  display: flex;
+  align-items: center;       /* Alinha verticalmente todos no centro */
+  justify-content: space-between; /* Distribui o espaço entre os elementos */
+  gap: 20px;                 /* Espaço de segurança entre as colunas */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Garante que os containers das imagens tenham o mesmo peso visual */
+.coluna-imagem {
+  flex: 1;                   /* Faz as duas laterais crescerem por igual */
+  display: flex;
+}
+
+/* Alinha a imagem da direita para o canto direito */
+.coluna-imagem:last-child {
+  justify-content: flex-end;
+}
+
+.imagem-lateral {
+  max-width: 300px;          /* Limita o tamanho máximo das imagens */
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Estilização do Formulário Central */
+.meu-formulario {
+  flex: 2;                   /* Dá mais espaço para o formulário no centro */
+  max-width: 600px;          /* Evita que o formulário fique largo demais */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Responsividade: Transforma em coluna em telas menores (celulares) */
+@media (max-width: 768px) {
+  .container-tres-colunas {
+    flex-direction: column;
+  }
+  
+  .coluna-imagem {
+    justify-content: center !important; /* Centraliza as imagens no mobile */
+  }
+  
+  .meu-formulario {
+    width: 100%;
+    order: -1; /* Opcional: Joga o formulário para o topo no mobile */
+  }
+}
+
+/* Alinha os três elementos em linha e centraliza */
+.container-central {
+  display: flex;
+  justify-content: space-between; /* Distribui o espaço entre eles */
+  align-items: center;            /* Alinha todos verticalmente ao centro */
+  max-width: 900px;              /* Define uma largura máxima para o bloco */
+  margin: 0 auto;                 /* Centraliza o bloco inteiro na tela */
+  gap: 20px;                      /* Cria um espaçamento interno entre as imagens e o form */
+  }
+
+
+.coluna-imagem {
+  flex: 1;                   /* Faz as duas laterais crescerem por igual */
+  display: flex;
+}
+
+/* Alinha a imagem da direita para o canto direito */
+.coluna-imagem:last-child {
+  justify-content: flex-end;
+}
+
+
+.container-tres-colunas {
+  display: flex;
+  align-items: center;       /* Alinha verticalmente todos no centro */
+  justify-content: space-between; /* Distribui o espaço entre os elementos */
+  gap: 20px;                 /* Espaço de segurança entre as colunas */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.grupo-form{
+    margin-bottom: 1.5rem;
+}
+
+.campo-form{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--color-bacgraund1);
+    outline: none;
+
+}
+
+.campo-form:focus{
+    border: 1px solid var(--color-button1);
+}
+
+.button-form{
+    width: 100%;
+    padding: 1rem 2rem;
+    color: var(--color-bacgraund1);
+    font-size: medium;
+    background-color: var(--color-button2);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.button-form:hover{
+    transform: translateY(-4px);
+    font-weight: 700;
+}
+
+footer{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--color-text1);
+}
+
+footer > h3{
+    letter-spacing: 3px;
+    font-size: medium ;
+}
+
+footer > p{
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+
+@keyframes flutuar{
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
